@@ -11,9 +11,9 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <nav class="nav-container">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="contact.html">Contact / Booking</a></li>
+    <ul class="nav-links left">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
     </ul>
 
     <div class="logo">
@@ -21,33 +21,35 @@
       <p>Premium Travel Consulting · Luxury Experiences · Resort Getaways</p>
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links right">
       <li><a href="#services">Services</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HERO SECTION -->
+<section id="home" class="hero">
   <div class="hero-text">
     <h2>Curated Luxury Travel Experiences</h2>
     <p>Tailored journeys. Elite resorts. Seamless travel planning.</p>
     <a class="whatsapp-btn" href="https://wa.me/233598695820" target="_blank">
       💬 Chat on WhatsApp to Book Consultation
     </a>
+    <button id="openModal" class="whatsapp-btn">📩 Book a Consultation</button>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
+<!-- ABOUT SECTION -->
+<section id="about" class="section light">
   <h2>About AfroLuxe Voyages</h2>
   <p>AfroLuxe Voyages is a premium travel consultancy specializing in luxury travel planning, bespoke itineraries, and resort bookings across Africa and worldwide.</p>
   <p>We curate seamless travel experiences for individuals, couples, families, and corporate clients seeking exclusivity, comfort, and cultural depth.</p>
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
+<!-- SERVICES SECTION -->
+<section id="services" class="section">
   <h2>Our Services</h2>
   <div class="services-grid">
     <div class="service-card">
@@ -65,56 +67,24 @@
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
+<!-- GALLERY SECTION -->
+<section id="gallery" class="gallery">
   <img src="images/resort.jpg" alt="Luxury Resort">
   <img src="images/hotel.jpg" alt="Luxury Hotel">
   <img src="images/beach.jpg" alt="Private Beach Resort">
 </section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>AfroLuxe Voyages | Contact & Booking</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <nav class="nav-container">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="contact.html">Contact / Booking</a></li>
-    </ul>
-
-    <div class="logo">
-      <h1>AfroLuxe Voyages</h1>
-      <p>Premium Travel Consulting · Luxury Experiences · Resort Getaways</p>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#gallery">Gallery</a></li>
-    </ul>
-  </nav>
-</header>
 
 <!-- CONTACT SECTION -->
-<section class="section" id="contact">
+<section id="contact" class="section light">
   <h2>Contact Us</h2>
   <p>Have questions or need help planning your next journey? Get in touch with AfroLuxe Voyages today.</p>
-
   <p><strong>Email:</strong> afroluxevoyages@gmail.com</p>
   <p><strong>WhatsApp:</strong> +233 598 695 820</p>
   <p><strong>Location:</strong> Accra, Ghana</p>
   <p>Business hours: Monday – Friday, 9:00 AM – 6:00 PM (GMT)</p>
-
-  <button id="openModal" class="whatsapp-btn">📩 Book a Consultation</button>
 </section>
 
-<!-- BOOKING ENQUIRY MODAL -->
+<!-- BOOKING MODAL -->
 <div id="bookingModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -146,88 +116,93 @@
 </footer>
 
 <script>
-// Modal JS
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Modal
 const modal = document.getElementById("bookingModal");
 const btn = document.getElementById("openModal");
 const span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() { modal.style.display = "block"; }
-span.onclick = function() { modal.style.display = "none"; }
-window.onclick = function(event) {
-  if(event.target == modal) { modal.style.display = "none"; }
-}
+btn.onclick = ()=>{ modal.style.display = "block"; }
+span.onclick = ()=>{ modal.style.display = "none"; }
+window.onclick = (event)=>{ if(event.target==modal) modal.style.display="none"; }
 </script>
 
 </body>
 </html>
+/* RESET */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* COLORS */
+:root {
+  --white: #ffffff;
+  --ocean-blue: #0b3c5d;
+  --gold: #c9a24d;
+  --light-grey: #f5f7fa;
+}
+
+/* BODY */
+body { background: var(--white); color: var(--ocean-blue); scroll-behavior: smooth; }
+
+/* NAVBAR */
+.navbar { background: var(--white); border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+.nav-container { max-width: 1200px; margin: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--ocean-blue); font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+.logo { text-align: center; }
+.logo h1 { font-size: 26px; color: var(--ocean-blue); }
+.logo p { font-size: 12px; color: var(--gold); letter-spacing: 1px; }
+
+/* HERO */
+.hero { height: 90vh; background: linear-gradient(rgba(11,60,93,0.5), rgba(11,60,93,0.5)), url("images/resort.jpg") center/cover no-repeat; display: flex; justify-content: center; align-items: center; text-align: center; }
+.hero-text { color: var(--white); }
+.hero-text h2 { font-size: 42px; margin-bottom: 10px; }
+.hero-text p { font-size: 20px; margin-bottom: 20px; }
+.whatsapp-btn { display: inline-block; margin: 10px; padding: 14px 28px; background: var(--gold); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.whatsapp-btn:hover { background: var(--ocean-blue); }
+
+/* SECTIONS */
+.section { padding: 80px 20px; max-width: 1100px; margin: auto; text-align: center; }
+.light { background: var(--light-grey); }
+.section h2 { margin-bottom: 30px; font-size: 32px; }
+
+/* SERVICES */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 30px; }
+.service-card { border: 1px solid #eee; padding: 30px; border-radius: 10px; transition: 0.3s; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* GALLERY */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 10px; padding: 60px 20px; }
+.gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; }
+
+/* FOOTER */
+.footer { background: var(--ocean-blue); color: var(--white); text-align: center; padding: 20px; }
+
 /* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 80px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(11,60,93,0.9);
+.modal { display: none; position: fixed; z-index: 999; padding-top: 80px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(11,60,93,0.9); }
+.modal-content { background: var(--white); margin: auto; padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; color: var(--ocean-blue); }
+.close { color: var(--gold); float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+.close:hover { color: var(--ocean-blue); }
+.modal form { display: flex; flex-direction: column; gap: 15px; }
+.modal form input, .modal form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+.modal form button { background: var(--gold); color: var(--white); border: none; padding: 12px; border-radius: 25px; font-weight: bold; cursor: pointer; }
+.modal form button:hover { background: var(--ocean-blue); }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-container { flex-direction: column; }
+  .nav-links { justify-content: center; margin: 10px 0; }
+  .hero-text h2 { font-size: 32px; }
+  .hero-text p { font-size: 18px; }
 }
-
-.modal-content {
-  background-color: #ffffff;
-  margin: auto;
-  padding: 30px;
-  border: 1px solid #888;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 10px;
-  color: #0b3c5d;
-}
-
-.close {
-  color: #c9a24d;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #0b3c5d;
-}
-
-.modal form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.modal form input, .modal form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.modal form button {
-  background: #c9a24d;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal form button:hover {
-  background: #0b3c5d;
-}
-
-  
-<!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 AfroLuxe Voyages · Premium Travel Consulting</p>
-</footer>
-
-</body>
-</html>
