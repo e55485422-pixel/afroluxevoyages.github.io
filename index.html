@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,34 +19,34 @@
 }
 
 body {
-  background: #0a1f44;
-  color: #ffffff;
+  background: #ffffff;
+  color: #0b2c3d;
   line-height: 1.7;
 }
 
 /* HEADER */
 header {
+  background: #0b2c3d;
   padding: 30px 8%;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* LOGO */
 .logo {
   font-size: 42px;
   font-weight: 700;
   letter-spacing: 2px;
+  color: #ffffff;
 }
 
 .logo span {
-  color: #d4af37;
+  color: #c9a24d;
 }
 
 .tagline {
   font-size: 14px;
-  color: #ddd;
-  text-transform: uppercase;
+  color: #e6e6e6;
   margin-top: 6px;
+  text-transform: uppercase;
 }
 
 /* NAV */
@@ -62,66 +61,66 @@ nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  position: relative;
 }
 
-nav a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #d4af37;
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  transition: 0.3s;
+nav a:hover {
+  color: #c9a24d;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* SLIDER */
-.slider {
-  height: 75vh;
-  overflow: hidden;
-}
-
-.slides {
+/* HERO */
+.hero {
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+  height: 80vh;
   display: flex;
-  width: 300%;
-  animation: slide 18s infinite;
+  align-items: center;
+  justify-content: center;
 }
 
-.slides img {
-  width: 100%;
-  height: 75vh;
-  object-fit: cover;
-  filter: brightness(75%);
+.hero-overlay {
+  background: rgba(11,44,61,0.65);
+  padding: 60px;
+  text-align: center;
+  color: #ffffff;
 }
 
-@keyframes slide {
-  0% {transform: translateX(0);}
-  33% {transform: translateX(-100%);}
-  66% {transform: translateX(-200%);}
+.hero-overlay h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 18px;
 }
 
 /* SECTIONS */
 .container {
   padding: 90px 10%;
-  text-align: center;
-  background: #0a1f44;
 }
 
 .container h2 {
-  color: #d4af37;
+  color: #0b2c3d;
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .container p {
   max-width: 900px;
-  margin: 0 auto 15px;
-  color: #e6e6e6;
+  margin: auto;
+  text-align: center;
+  color: #333;
+}
+
+/* ABOUT IMAGE */
+.about-image {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 6px;
 }
 
 /* SERVICES */
@@ -129,46 +128,40 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .service-box {
-  background: #081833;
-  padding: 30px;
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #f4f6f8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.service-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-box div {
+  padding: 25px;
 }
 
 .service-box h3 {
-  color: #d4af37;
+  color: #0b2c3d;
   margin-bottom: 10px;
 }
 
-/* BOOKING FORM */
-form {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #081833;
-  padding: 35px;
-  border: 1px solid rgba(255,255,255,0.1);
+/* CONTACT */
+.contact {
+  background: url("https://images.unsplash.com/photo-1493558103817-58b2924bce98") center/cover no-repeat;
 }
 
-form input, form textarea, form button {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: none;
-}
-
-form input, form textarea {
-  background: #ffffff;
-  color: #000;
-}
-
-form button {
-  background: #d4af37;
-  color: #0a1f44;
-  font-weight: bold;
-  cursor: pointer;
+.contact-overlay {
+  background: rgba(11,44,61,0.75);
+  padding: 80px 10%;
+  color: #ffffff;
+  text-align: center;
 }
 
 /* WHATSAPP */
@@ -180,7 +173,7 @@ form button {
 
 .whatsapp-booking a {
   background: #25D366;
-  color: #fff;
+  color: #ffffff;
   padding: 14px 22px;
   border-radius: 50px;
   text-decoration: none;
@@ -189,21 +182,20 @@ form button {
 
 /* FOOTER */
 footer {
-  background: #06142d;
+  background: #0b2c3d;
   padding: 30px 10%;
   text-align: center;
+  color: #ffffff;
 }
 
 footer a {
-  color: #ddd;
+  color: #ffffff;
   margin: 0 15px;
   text-decoration: none;
 }
 
-footer p {
-  margin-top: 15px;
-  font-size: 13px;
-  color: #aaa;
+footer a:hover {
+  color: #c9a24d;
 }
 </style>
 </head>
@@ -222,13 +214,12 @@ footer p {
   </nav>
 </header>
 
-<div class="slider" id="home">
-  <div class="slides">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+<section class="hero" id="home">
+  <div class="hero-overlay">
+    <h1>Curated Luxury Travel Experiences</h1>
+    <p>Elegant journeys across Africa and beyond</p>
   </div>
-</div>
+</section>
 
 <section class="container" id="about">
   <h2>About AfroLuxe Voyages</h2>
@@ -246,33 +237,49 @@ footer p {
     experiences through trusted partnerships, destination expertise, and
     personalized service.
   </p>
+
+  <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+  </div>
 </section>
 
 <section class="container" id="services">
   <h2>Our Services</h2>
   <div class="services">
     <div class="service-box">
-      <h3>Luxury Travel Planning</h3>
-      <p>Personalized itineraries designed with elegance and comfort.</p>
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+      <div>
+        <h3>Luxury Travel Planning</h3>
+        <p>Tailored itineraries crafted with elegance and precision.</p>
+      </div>
     </div>
+
     <div class="service-box">
-      <h3>Resort Bookings</h3>
-      <p>Access to handpicked luxury resorts and retreats.</p>
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <div>
+        <h3>Resort Bookings</h3>
+        <p>Handpicked resorts offering privacy, comfort, and style.</p>
+      </div>
     </div>
+
     <div class="service-box">
-      <h3>Bespoke Experiences</h3>
-      <p>Private tours, honeymoons, corporate & VIP travel.</p>
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+      <div>
+        <h3>Bespoke Experiences</h3>
+        <p>Private tours, honeymoons, and exclusive escapes.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="container" id="contact">
-  <h2>Contact Us</h2>
-  <p>Have questions or need help planning your next journey?</p>
-  <p><strong>Email:</strong> afroluxevoyages@gmail.com</p>
-  <p><strong>WhatsApp:</strong> +233 598 695 820</p>
-  <p><strong>Location:</strong> Accra, Ghana</p>
-  <p>Business hours: Monday – Friday, 9:00 AM – 6:00 PM (GMT)</p>
+<section class="contact" id="contact">
+  <div class="contact-overlay">
+    <h2>Contact Us</h2>
+    <p>Email: afroluxevoyages@gmail.com</p>
+    <p>WhatsApp: +233 598 695 820</p>
+    <p>Location: Accra, Ghana</p>
+    <p>Business Hours: Mon–Fri, 9:00 AM – 6:00 PM (GMT)</p>
+  </div>
 </section>
 
 <div class="whatsapp-booking">
@@ -282,10 +289,8 @@ footer p {
 </div>
 
 <footer>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-  <p>© 2026 AfroLuxe Voyages · https://afroluxevoyages.github.io</p>
+  <p>© 2026 AfroLuxe Voyages</p>
+  <p>https://afroluxevoyages.github.io</p>
 </footer>
 
 </body>
