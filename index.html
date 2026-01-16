@@ -24,9 +24,16 @@ body {
   line-height: 1.7;
 }
 
+/* BRAND COLORS */
+:root {
+  --blue: #0b2c3d;
+  --gold: #c9a24d;
+  --soft: #f4f6f8;
+}
+
 /* HEADER */
 header {
-  background: #0b2c3d;
+  background: var(--blue);
   padding: 30px 8%;
   text-align: center;
 }
@@ -39,7 +46,7 @@ header {
 }
 
 .logo span {
-  color: #c9a24d;
+  color: var(--gold);
 }
 
 .tagline {
@@ -64,32 +71,88 @@ nav a {
 }
 
 nav a:hover {
-  color: #c9a24d;
+  color: var(--gold);
 }
 
 /* HERO */
 .hero {
   background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.hero-overlay {
+.hero-content {
   background: rgba(11,44,61,0.65);
-  padding: 60px;
-  text-align: center;
+  padding: 70px;
+  margin-left: 8%;
+  max-width: 600px;
   color: #ffffff;
 }
 
-.hero-overlay h1 {
-  font-size: 40px;
+.hero-content h1 {
+  font-size: 42px;
   margin-bottom: 15px;
 }
 
-.hero-overlay p {
+.hero-content span {
+  color: var(--gold);
+}
+
+.hero-content p {
   font-size: 18px;
+}
+
+/* HOME GRID */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 90px 10%;
+  background: var(--soft);
+}
+
+.home-card {
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.home-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.home-card div {
+  padding: 25px;
+}
+
+.home-card h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+/* SPLIT SECTION */
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 90px 10%;
+  gap: 50px;
+}
+
+.split img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.split h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.split h2 span {
+  color: var(--gold);
 }
 
 /* SECTIONS */
@@ -98,29 +161,15 @@ nav a:hover {
 }
 
 .container h2 {
-  color: #0b2c3d;
+  text-align: center;
   font-size: 32px;
   margin-bottom: 25px;
-  text-align: center;
 }
 
 .container p {
   max-width: 900px;
   margin: auto;
   text-align: center;
-  color: #333;
-}
-
-/* ABOUT IMAGE */
-.about-image {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 6px;
 }
 
 /* SERVICES */
@@ -132,7 +181,7 @@ nav a:hover {
 }
 
 .service-box {
-  background: #f4f6f8;
+  background: var(--soft);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -147,11 +196,6 @@ nav a:hover {
   padding: 25px;
 }
 
-.service-box h3 {
-  color: #0b2c3d;
-  margin-bottom: 10px;
-}
-
 /* CONTACT */
 .contact {
   background: url("https://images.unsplash.com/photo-1493558103817-58b2924bce98") center/cover no-repeat;
@@ -159,7 +203,7 @@ nav a:hover {
 
 .contact-overlay {
   background: rgba(11,44,61,0.75);
-  padding: 80px 10%;
+  padding: 90px 10%;
   color: #ffffff;
   text-align: center;
 }
@@ -182,20 +226,10 @@ nav a:hover {
 
 /* FOOTER */
 footer {
-  background: #0b2c3d;
+  background: var(--blue);
   padding: 30px 10%;
   text-align: center;
   color: #ffffff;
-}
-
-footer a {
-  color: #ffffff;
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #c9a24d;
 }
 </style>
 </head>
@@ -214,35 +248,65 @@ footer a:hover {
   </nav>
 </header>
 
+<!-- HOME -->
 <section class="hero" id="home">
-  <div class="hero-overlay">
-    <h1>Curated Luxury Travel Experiences</h1>
-    <p>Elegant journeys across Africa and beyond</p>
+  <div class="hero-content">
+    <h1>Curated <span>Luxury</span> Travel Experiences</h1>
+    <p>
+      Thoughtfully designed journeys across Africa and beyond,
+      crafted for comfort, elegance, and unforgettable moments.
+    </p>
   </div>
 </section>
 
+<section class="home-grid">
+  <div class="home-card">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+    <div>
+      <h3>Luxury Resorts</h3>
+      <p>Exclusive stays at world-class resorts and private retreats.</p>
+    </div>
+  </div>
+
+  <div class="home-card">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <div>
+      <h3>Seamless Planning</h3>
+      <p>Every detail handled with precision and discretion.</p>
+    </div>
+  </div>
+
+  <div class="home-card">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <div>
+      <h3>Bespoke Experiences</h3>
+      <p>Private tours, honeymoons, and personalized escapes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+  <div>
+    <h2>Travel Designed with <span>Intention</span></h2>
+    <p>
+      AfroLuxe Voyages is a premium travel consulting brand specializing in
+      luxury travel planning, bespoke itineraries, resort bookings, and curated
+      experiences across Africa and worldwide.
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section class="container" id="about">
   <h2>About AfroLuxe Voyages</h2>
-  <p>
-    AfroLuxe Voyages is a premium travel consulting brand specializing in luxury
-    travel planning, bespoke itineraries, resort bookings, and curated travel
-    experiences across Africa and worldwide.
-  </p>
   <p>
     We help individuals, couples, families, and corporate travelers design
     seamless journeys tailored to their preferences, comfort, and budget.
   </p>
-  <p>
-    Our goal is to simplify travel planning while delivering unforgettable
-    experiences through trusted partnerships, destination expertise, and
-    personalized service.
-  </p>
-
-  <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
-  </div>
 </section>
 
+<!-- SERVICES -->
 <section class="container" id="services">
   <h2>Our Services</h2>
   <div class="services">
@@ -250,28 +314,27 @@ footer a:hover {
       <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
       <div>
         <h3>Luxury Travel Planning</h3>
-        <p>Tailored itineraries crafted with elegance and precision.</p>
+        <p>Tailored itineraries designed with elegance.</p>
       </div>
     </div>
-
     <div class="service-box">
       <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
       <div>
         <h3>Resort Bookings</h3>
-        <p>Handpicked resorts offering privacy, comfort, and style.</p>
+        <p>Handpicked luxury resorts worldwide.</p>
       </div>
     </div>
-
     <div class="service-box">
       <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
       <div>
         <h3>Bespoke Experiences</h3>
-        <p>Private tours, honeymoons, and exclusive escapes.</p>
+        <p>Private and exclusive travel experiences.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-overlay">
     <h2>Contact Us</h2>
@@ -289,8 +352,7 @@ footer a:hover {
 </div>
 
 <footer>
-  <p>© 2026 AfroLuxe Voyages</p>
-  <p>https://afroluxevoyages.github.io</p>
+  <p>© 2026 AfroLuxe Voyages · https://afroluxevoyages.github.io</p>
 </footer>
 
 </body>
