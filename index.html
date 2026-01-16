@@ -1,476 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AfroLuxe Voyages | Luxury Travel Consulting</title>
-
-<!-- Google AdSense -->
-<script async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-429083996733262"
-  crossorigin="anonymous"></script>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background: #ffffff;
-  color: #0b2c3d;
-  line-height: 1.7;
-}
-
-/* BRAND COLORS */
-:root {
-  --blue: #0b2c3d;
-  --gold: #c9a24d;
-  --soft: #f4f6f8;
-}
-
-/* HEADER */
-header {
-  background: var(--blue);
-  padding: 30px 8%;
-  text-align: center;
-}
-
-.logo {
-  font-size: 42px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #ffffff;
-}
-
-.logo span {
-  color: var(--gold);
-}
-
-.tagline {
-  font-size: 14px;
-  color: #e6e6e6;
-  margin-top: 6px;
-  text-transform: uppercase;
-}
-
-/* NAV */
-nav {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-/* HERO */
-.hero {
-  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-}
-
-.hero-content {
-  background: rgba(11,44,61,0.65);
-  padding: 70px;
-  margin-left: 8%;
-  max-width: 600px;
-  color: #ffffff;
-}
-
-.hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.hero-content span {
-  color: var(--gold);
-}
-
-.hero-content p {
-  font-size: 18px;
-}
-
-/* HOME GRID */
-.home-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 90px 10%;
-  background: var(--soft);
-}
-
-.home-card {
-  background: #ffffff;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.home-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-}
-
-.home-card div {
-  padding: 25px;
-}
-
-.home-card h3 {
-  color: var(--blue);
-  margin-bottom: 10px;
-}
-
-/* SPLIT SECTION */
-.split {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 90px 10%;
-  gap: 50px;
-}
-
-.split img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-.split h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.split h2 span {
-  color: var(--gold);
-}
-
-/* SECTIONS */
-.container {
-  padding: 90px 10%;
-}
-
-.container h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
-.container p {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-/* SERVICES */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.service-box {
-  background: var(--soft);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.service-box img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.service-box div {
-  padding: 25px;
-}
-
-/* CONTACT */
-.contact {
-  background: url("https://images.unsplash.com/photo-1493558103817-58b2924bce98") center/cover no-repeat;
-}
-
-.contact-overlay {
-  background: rgba(11,44,61,0.75);
-  padding: 90px 10%;
-  color: #ffffff;
-  text-align: center;
-}
-
-/* WHATSAPP */
-.whatsapp-booking {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-}
-
-.whatsapp-booking a {
-  background: #25D366;
-  color: #ffffff;
-  padding: 14px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: var(--blue);
-  padding: 30px 10%;
-  text-align: center;
-  color: #ffffff;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>AfroLuxe Voyages | Premium Travel Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <div class="logo">AFRO<span>LUXE</span> VOYAGES</div>
-  <div class="tagline">Luxury Travel Consulting · Bespoke Experiences</div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact / Booking</a></li>
+    </ul>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">
+      <h1>AfroLuxe Voyages</h1>
+      <p>Premium Travel Consulting · Luxury Experiences · Resort Getaways</p>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
   </nav>
 </header>
 
-<!-- HOME -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Curated <span>Luxury</span> Travel Experiences</h1>
-    <p>
-      Thoughtfully designed journeys across Africa and beyond,
-      crafted for comfort, elegance, and unforgettable moments.
-    </p>
-  </div>
-</section>
-
-<section class="home-grid">
-  <div class="home-card">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
-    <div>
-      <h3>Luxury Resorts</h3>
-      <p>Exclusive stays at world-class resorts and private retreats.</p>
-    </div>
-  </div>
-
-  <div class="home-card">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <div>
-      <h3>Seamless Planning</h3>
-      <p>Every detail handled with precision and discretion.</p>
-    </div>
-  </div>
-
-  <div class="home-card">
-    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-    <div>
-      <h3>Bespoke Experiences</h3>
-      <p>Private tours, honeymoons, and personalized escapes.</p>
-    </div>
-  </div>
-</section>
-
-<section class="split">
-  <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
-  <div>
-    <h2>Travel Designed with <span>Intention</span></h2>
-    <p>
-      AfroLuxe Voyages is a premium travel consulting brand specializing in
-      luxury travel planning, bespoke itineraries, resort bookings, and curated
-      experiences across Africa and worldwide.
-    </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h2>Curated Luxury Travel Experiences</h2>
+    <p>Tailored journeys. Elite resorts. Seamless travel planning.</p>
+    <a class="whatsapp-btn" href="https://wa.me/233598695820" target="_blank">
+      💬 Chat on WhatsApp to Book Consultation
+    </a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="container" id="about">
+<section class="section" id="about">
   <h2>About AfroLuxe Voyages</h2>
-  <p>
-    We help individuals, couples, families, and corporate travelers design
-    seamless journeys tailored to their preferences, comfort, and budget.
-  </p>
+  <p>AfroLuxe Voyages is a premium travel consultancy specializing in luxury travel planning, bespoke itineraries, and resort bookings across Africa and worldwide.</p>
+  <p>We curate seamless travel experiences for individuals, couples, families, and corporate clients seeking exclusivity, comfort, and cultural depth.</p>
 </section>
 
 <!-- SERVICES -->
-<section class="container" id="services">
+<section class="section" id="services">
   <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-box">
-      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
-      <div>
-        <h3>Luxury Travel Planning</h3>
-        <p>Tailored itineraries designed with elegance.</p>
-      </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Luxury Travel Consulting</h3>
+      <p>Personalized travel advisory tailored to your lifestyle.</p>
     </div>
-    <div class="service-box">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-      <div>
-        <h3>Resort Bookings</h3>
-        <p>Handpicked luxury resorts worldwide.</p>
-      </div>
+    <div class="service-card">
+      <h3>Resort & Hotel Bookings</h3>
+      <p>Exclusive access to world-class resorts and luxury hotels.</p>
     </div>
-    <div class="service-box">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-      <div>
-        <h3>Bespoke Experiences</h3>
-        <p>Private and exclusive travel experiences.</p>
-      </div>
+    <div class="service-card">
+      <h3>Curated Experiences</h3>
+      <p>Private tours, honeymoons, and bespoke destination experiences.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-overlay">
-    <h2>Contact Us</h2>
-    <p>Email: afroluxevoyages@gmail.com</p>
-    <p>WhatsApp: +233 598 695 820</p>
-    <p>Location: Accra, Ghana</p>
-    <p>Business Hours: Mon–Fri, 9:00 AM – 6:00 PM (GMT)</p>
-  </div>
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <img src="images/resort.jpg" alt="Luxury Resort">
+  <img src="images/hotel.jpg" alt="Luxury Hotel">
+  <img src="images/beach.jpg" alt="Private Beach Resort">
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AfroLuxe Voyages | Contact & Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact / Booking</a></li>
+    </ul>
+
+    <div class="logo">
+      <h1>AfroLuxe Voyages</h1>
+      <p>Premium Travel Consulting · Luxury Experiences · Resort Getaways</p>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Have questions or need help planning your next journey? Get in touch with AfroLuxe Voyages today.</p>
+
+  <p><strong>Email:</strong> afroluxevoyages@gmail.com</p>
+  <p><strong>WhatsApp:</strong> +233 598 695 820</p>
+  <p><strong>Location:</strong> Accra, Ghana</p>
+  <p>Business hours: Monday – Friday, 9:00 AM – 6:00 PM (GMT)</p>
+
+  <button id="openModal" class="whatsapp-btn">📩 Book a Consultation</button>
 </section>
 
-<div class="whatsapp-booking">
-  <a href="https://wa.me/233598695820" target="_blank">
-    💬 Book a Consultation on WhatsApp
-  </a>
+<!-- BOOKING ENQUIRY MODAL -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Booking Enquiry</h2>
+    <form action="mailto:afroluxevoyages@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination">
+
+      <label for="dates">Preferred Dates:</label>
+      <input type="text" id="dates" name="dates">
+
+      <label for="message">Message / Requests:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit" class="whatsapp-btn">Submit Enquiry</button>
+    </form>
+  </div>
 </div>
-<section class="container" id="privacy">
-  <h2>Privacy Policy</h2>
 
-  <p>
-    AfroLuxe Voyages values your privacy and is committed to protecting your
-    personal information. This Privacy Policy explains how we collect, use,
-    and safeguard your data when you interact with our website or services.
-  </p>
-
-  <p>
-    <strong>Information We Collect:</strong><br>
-    We may collect personal information such as your name, email address,
-    phone number, travel preferences, and destination interests when you
-    contact us, request a consultation, or communicate via WhatsApp or email.
-  </p>
-
-  <p>
-    <strong>How We Use Your Information:</strong><br>
-    Your information is used solely to respond to inquiries, provide travel
-    consulting services, plan itineraries, process bookings, and improve our
-    services. We do not sell or rent your personal data.
-  </p>
-
-  <p>
-    <strong>Third-Party Services:</strong><br>
-    We may share necessary information with trusted travel partners such as
-    airlines, hotels, resorts, or tour operators strictly for the purpose of
-    fulfilling your travel arrangements.
-  </p>
-
-  <p>
-    <strong>Cookies & Analytics:</strong><br>
-    Our website may use cookies and analytics tools to improve user experience,
-    track performance, and analyze site traffic. You may disable cookies in
-    your browser settings.
-  </p>
-
-  <p>
-    <strong>Data Security:</strong><br>
-    We take reasonable measures to protect your personal information from
-    unauthorized access, misuse, or disclosure.
-  </p>
-
-  <p>
-    <strong>Your Rights:</strong><br>
-    You have the right to request access, correction, or deletion of your
-    personal data by contacting us directly.
-  </p>
-
-  <p>
-    <strong>Contact:</strong><br>
-    For privacy-related questions, please email:
-    <br>afroluxevoyages@gmail.com
-  </p>
-</section>
-<section class="container" id="terms">
-  <h2>Terms & Conditions</h2>
-
-  <p>
-    By accessing or using the AfroLuxe Voyages website and services, you agree
-    to be bound by the following Terms and Conditions. Please read them carefully.
-  </p>
-
-  <p>
-    <strong>Nature of Services:</strong><br>
-    AfroLuxe Voyages provides luxury travel consulting, itinerary planning,
-    resort bookings, and curated travel experiences. We act as an intermediary
-    between clients and third-party travel providers.
-  </p>
-
-  <p>
-    <strong>Consultations:</strong><br>
-    Travel consultations are advisory in nature. Prices, availability, and
-    travel conditions are subject to change based on suppliers and destination
-    regulations.
-  </p>
-
-  <p>
-    <strong>Bookings & Payments:</strong><br>
-    All bookings are subject to the terms and conditions of airlines, hotels,
-    resorts, and tour operators. AfroLuxe Voyages is not responsible for changes
-    made by third-party providers.
-  </p>
-
-  <p>
-    <strong>Cancellations & Changes:</strong><br>
-    Cancellation policies vary depending on suppliers. Clients are responsible
-    for reviewing and agreeing to applicable cancellation terms before confirming
-    bookings.
-  </p>
-
-  <p>
-    <strong>Travel Risks:</strong><br>
-    Clients acknowledge that travel involves inherent risks including delays,
-    cancellations, health concerns, and unforeseen events. AfroLuxe Voyages
-    shall not be held liable for force majeure circumstances.
-  </p>
-
-  <p>
-    <strong>Limitation of Liability:</strong><br>
-    AfroLuxe Voyages shall not be liable for any loss, injury, damage, or expense
-    resulting from acts or omissions of third-party service providers.
-  </p>
-
-  <p>
-    <strong>Intellectual Property:</strong><br>
-    All content on this website, including text, branding, and design, is the
-    property of AfroLuxe Voyages and may not be copied or used without permission.
-  </p>
-
-  <p>
-    <strong>Governing Law:</strong><br>
-    These Terms & Conditions are governed by the laws of Ghana.
-  </p>
-</section>
-
-<footer>
-  <p>© 2026 AfroLuxe Voyages · https://afroluxevoyages.github.io</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 AfroLuxe Voyages · Premium Travel Consulting</p>
 </footer>
-<a href="#privacy">Privacy Policy</a>
-<a href="#terms">Terms & Conditions</a>
+
+<script>
+// Modal JS
+const modal = document.getElementById("bookingModal");
+const btn = document.getElementById("openModal");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() { modal.style.display = "block"; }
+span.onclick = function() { modal.style.display = "none"; }
+window.onclick = function(event) {
+  if(event.target == modal) { modal.style.display = "none"; }
+}
+</script>
+
+</body>
+</html>
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(11,60,93,0.9);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  color: #0b3c5d;
+}
+
+.close {
+  color: #c9a24d;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #0b3c5d;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal form input, .modal form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal form button {
+  background: #c9a24d;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal form button:hover {
+  background: #0b3c5d;
+}
+
+  
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 AfroLuxe Voyages · Premium Travel Consulting</p>
+</footer>
 
 </body>
 </html>
