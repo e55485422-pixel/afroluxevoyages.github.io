@@ -4,49 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Afroluxury Travel | Cultural Journeys & Luxury Experiences</title>
-  <meta name="description" content="Afroluxury Travel designs immersive African cultural tours, luxury resort escapes, global travel and study abroad pathways through expert consultation." />
+  <title>Afroluxury Travel | Local & International Tours, Luxury & Study Abroad</title>
+  <meta name="description" content="Afroluxury Travel is a Ghana-based tour and travel company offering local tours, international travel, luxury resorts, cultural experiences, and study abroad consultation." />
 
   <style>
     :root{--white:#ffffff;--blue:#0b5fa5;--gold:#d4af37;--dark:#111;}
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
     body{background:var(--white);color:var(--dark);line-height:1.9;font-size:12px;}
 
+    /* HEADER */
     header{position:fixed;top:0;width:100%;background:#000;z-index:999;}
     nav{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;}
-    nav a{color:#fff;text-decoration:none;margin-left:24px;font-weight:600;}
+    nav a{color:#fff;text-decoration:none;margin-left:22px;font-weight:600;}
 
-    .hero{height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b') center/cover no-repeat;display:flex;align-items:center;}
+    /* HERO */
+    .hero{height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;display:flex;align-items:center;}
     .hero-content{max-width:1200px;margin:auto;padding:0 24px;color:#fff;}
-    .hero h1{font-size:46px;color:var(--gold);max-width:780px;margin-bottom:22px;}
-    .hero p{font-size:16px;max-width:700px;}
+    .hero h1{font-size:46px;color:var(--gold);max-width:820px;margin-bottom:22px;}
+    .hero p{font-size:16px;max-width:720px;}
     .hero button{margin-top:34px;padding:18px 44px;border:none;border-radius:40px;background:var(--gold);font-weight:bold;cursor:pointer;}
 
     section{max-width:1200px;margin:auto;padding:130px 24px;}
-    h2{font-size:28px;color:var(--blue);margin-bottom:30px;}
-    h3{font-size:17px;color:var(--gold);margin-bottom:12px;}
+    h2{font-size:30px;color:var(--blue);margin-bottom:30px;}
+    h3{font-size:18px;color:var(--gold);margin-bottom:12px;}
 
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;}
-    .about img{width:100%;border-radius:26px;}
+    /* INTRO */
+    .intro{font-size:14px;max-width:900px;}
 
-    .why{background:#f9fafb;border-left:6px solid var(--gold);padding:70px;border-radius:26px;}
-    .why ul{margin-top:20px;padding-left:20px;}
-    .why li{margin-bottom:12px;}
+    /* TOUR LIST */
+    .tour-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;margin-top:50px;}
+    .tour{border:1px solid #eee;border-radius:26px;overflow:hidden;}
+    .tour img{width:100%;height:230px;object-fit:cover;}
+    .tour div{padding:26px;}
 
-    .experience{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-bottom:110px;align-items:center;}
-    .experience:nth-child(even){direction:rtl;}
-    .experience:nth-child(even) *{direction:ltr;}
-    .experience img{width:100%;border-radius:26px;}
+    /* SPLIT */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+    .split img{width:100%;border-radius:26px;}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;}
-    .card{border:1px solid #eee;border-radius:26px;overflow:hidden;}
-    .card img{width:100%;height:230px;object-fit:cover;}
-    .card div{padding:26px;}
-
+    /* ITINERARY */
     .itinerary{border-left:4px solid var(--gold);padding-left:24px;margin-bottom:40px;}
 
-    .study{background:#fffaf0;border:2px solid var(--gold);padding:70px;border-radius:26px;}
+    /* STUDY */
+    .study{background:#f9fafb;border-left:6px solid var(--gold);padding:70px;border-radius:26px;}
 
+    /* CONSULT */
     .consult{display:grid;grid-template-columns:1fr 1fr;gap:70px;}
     form{display:grid;gap:16px;}
     input,textarea,button{padding:16px;border-radius:12px;border:1px solid #ccc;}
@@ -58,7 +59,7 @@
 
     .whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;padding:18px;border-radius:50%;text-decoration:none;font-size:18px;}
 
-    @media(max-width:768px){.about,.experience,.consult{grid-template-columns:1fr;}}
+    @media(max-width:768px){.split,.consult{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -67,98 +68,57 @@
   <nav>
     <strong style="color:#fff">Afroluxury Travel</strong>
     <div>
-      <a href="#about">About</a>
-      <a href="#why">Why Us</a>
-      <a href="#experiences">Experiences</a>
-      <a href="#destinations">Destinations</a>
+      <a href="#home">Home</a>
+      <a href="#local">Local Tours</a>
+      <a href="#international">International Tours</a>
       <a href="#study">Study Abroad</a>
       <a href="#consult">Consultation</a>
     </div>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-content">
-    <h1>Where African Heritage Meets Luxury Travel</h1>
-    <p>Afroluxury Travel curates meaningful African journeys, luxury resort escapes, global experiences, and study abroad pathways through personalized consultation.</p>
-    <button onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Begin Your Journey</button>
+    <h1>Local & International Tours Designed With Culture, Comfort & Luxury</h1>
+    <p>Afroluxury Travel is a Ghana-based tour company offering curated local tours, international travel experiences, luxury resorts, group adventures, and study abroad consultation.</p>
+    <button onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Plan Your Trip</button>
   </div>
 </section>
 
-<section id="about">
-  <div class="about">
-    <div>
-      <h2>Our Story</h2>
-      <p>Afroluxury Travel was created to bridge Africa’s rich cultural heritage with modern luxury travel standards.</p>
-      <p>We believe travel should be immersive, respectful, comfortable, and deeply personal. Our work is inspired by African tour operators who prioritize storytelling, connection, and authenticity.</p>
-      <p>Every journey we design is guided by consultation, ensuring clarity, trust, and experiences that align with your goals.</p>
-    </div>
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+<section>
+  <h2>About Afroluxury Travel</h2>
+  <p class="intro">We are inspired by established African tour operators who tell stories through travel. Our services cover Ghanaian local tours, African and international destinations, luxury holidays, and education pathways abroad. Every experience is planned with care, transparency, and cultural respect.</p>
+</section>
+
+<section id="local">
+  <h2>Local Tours (Ghana)</h2>
+  <div class="tour-grid">
+    <div class="tour"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"><div><h3>Heritage & History Tours</h3><p>Cape Coast & Elmina Castles, cultural villages, museums, and storytelling experiences.</p></div></div>
+    <div class="tour"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"><div><h3>Nature & Adventure</h3><p>Hiking, waterfalls, canopy walks, mountains, and eco-tourism sites.</p></div></div>
+    <div class="tour"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"><div><h3>Beach & Leisure</h3><p>Beach resorts, coastal relaxation, island-style experiences.</p></div></div>
   </div>
 </section>
 
-<section id="why">
-  <div class="why">
-    <h2>Why Travel With Afroluxury</h2>
-    <ul>
-      <li>Consultation-led planning for clarity and confidence</li>
-      <li>Balanced focus on culture, comfort, and luxury</li>
-      <li>Carefully selected destinations, guides, and accommodations</li>
-      <li>Transparent pricing and clear communication</li>
-      <li>Support for individuals, couples, groups, and students</li>
-    </ul>
+<section id="international">
+  <h2>International Tours</h2>
+  <div class="tour-grid">
+    <div class="tour"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><div><h3>Europe Tours</h3><p>Paris, Rome, Amsterdam, and other cultural and lifestyle destinations.</p></div></div>
+    <div class="tour"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"><div><h3>Luxury Resorts</h3><p>Island resorts, spa retreats, honeymoon and relaxation travel.</p></div></div>
+    <div class="tour"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff"><div><h3>Group & Corporate Trips</h3><p>Organized group travel, retreats, and special events.</p></div></div>
   </div>
 </section>
 
-<section id="experiences">
-  <h2>Signature Experiences</h2>
-
-  <div class="experience">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
-    <div>
-      <h3>Beaches & Coastal Escapes</h3>
-      <p>Unwind on pristine African and global beaches, from island resorts to quiet coastal retreats designed for relaxation and elegance.</p>
-    </div>
-  </div>
-
-  <div class="experience">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" />
-    <div>
-      <h3>Luxury Hotels & Resorts</h3>
-      <p>Experience refined hospitality, spa treatments, fine dining, and thoughtfully designed accommodations.</p>
-    </div>
-  </div>
-
-  <div class="experience">
-    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
-    <div>
-      <h3>Cultural & Group Tours</h3>
-      <p>Guided journeys through heritage sites, hiking trails, historical landmarks, and authentic community experiences.</p>
-    </div>
-  </div>
-</section>
-
-<section id="destinations">
-  <h2>Featured Destinations</h2>
-  <div class="grid">
-    <div class="card"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"><div><h3>Ghana</h3><p>Culture, history, beaches, festivals, and modern city life.</p></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><div><h3>Europe</h3><p>Historic cities, art, architecture, and lifestyle travel.</p></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"><div><h3>Luxury Resorts</h3><p>Island retreats, spa escapes, and leisure-focused journeys.</p></div></div>
-  </div>
-</section>
-
-<section id="itineraries">
+<section>
   <h2>Sample Itineraries</h2>
-  <div class="itinerary"><h3>7-Day Ghana Heritage Journey</h3><p>Accra, Cape Coast castles, cultural villages, beach relaxation, curated dining.</p></div>
-  <div class="itinerary"><h3>10-Day European Discovery</h3><p>Paris, Rome, Amsterdam with guided tours and leisure days.</p></div>
-  <div class="itinerary"><h3>5-Day Luxury Resort Retreat</h3><p>Private resort stay, spa treatments, fine dining, and rest.</p></div>
+  <div class="itinerary"><h3>7-Day Ghana Cultural Tour</h3><p>Accra city tour, Cape Coast castles, cultural villages, beach leisure.</p></div>
+  <div class="itinerary"><h3>10-Day Europe Experience</h3><p>Multi-city exploration with guided tours and free days.</p></div>
+  <div class="itinerary"><h3>5-Day Luxury Resort Escape</h3><p>Resort stay with spa, dining, and relaxation.</p></div>
 </section>
 
 <section id="study">
   <div class="study">
     <h2>Study Abroad Services</h2>
-    <p>We support students and families through international education planning, school selection guidance, and application consultation.</p>
-    <p>Our process is transparent, structured, and designed to give confidence at every step.</p>
+    <p>We provide consultation, guidance, and support for students seeking education opportunities abroad. Our service focuses on clarity, eligibility assessment, and structured planning.</p>
   </div>
 </section>
 
@@ -168,14 +128,14 @@
     <form>
       <input placeholder="Full Name" required />
       <input type="email" placeholder="Email Address" required />
-      <textarea placeholder="Tell us about your travel or study goals"></textarea>
+      <textarea placeholder="Tell us about your travel or study plans"></textarea>
       <button>Submit Inquiry</button>
     </form>
 
     <div class="payment">
       <p><strong>Inquiry Fee: 64 USD</strong></p>
       <p>MTN Mobile Money<br>Name: <strong>Hamenu Emmanuella</strong><br>Number: <strong>+233 598 695 820</strong></p>
-      <p>Bank transfer details will be shared securely after inquiry submission.</p>
+      <p>Bank transfer details are shared after inquiry submission.</p>
       <ul>
         <li>Non-refundable inquiry fee</li>
         <li>Deductible from final service cost</li>
