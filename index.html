@@ -4,141 +4,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Afroluxury Travel | Luxury, Cultural & Study Abroad Experiences</title>
-  <meta name="description" content=" Afroluxury Travel curates immersive African, European, and resort travel experiences, study abroad guidance, and luxury consultations." />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
+  <title>Afroluxury Travel | Authentic African & Global Experiences</title>
+  <meta name="description" content="Afroluxury Travel offers immersive African tours, global destinations, luxury resorts, and study abroad guidance through expert consultation." />
 
   <style>
-    :root{--white:#ffffff;--blue:#0a6ebd;--gold:#d4af37;--dark:#111;}
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;font-size:12px;}
-    body{background:var(--white);color:var(--dark);line-height:1.8;}
+    :root{--white:#ffffff;--blue:#0b5fa5;--gold:#d4af37;--dark:#111;}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+    body{background:var(--white);color:var(--dark);line-height:1.8;font-size:12px;}
 
-    nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.65);padding:16px;z-index:999;}
-    nav ul{list-style:none;display:flex;justify-content:center;gap:26px;flex-wrap:wrap;}
-    nav a{color:#fff;text-decoration:none;font-weight:bold;letter-spacing:.5px;}
+    /* NAV */
+    header{position:fixed;top:0;width:100%;background:#000;z-index:999;}
+    nav{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;}
+    nav a{color:#fff;text-decoration:none;margin-left:22px;font-weight:600;}
 
-    /* HERO SLIDER */
-    .hero{height:100vh;position:relative;overflow:hidden;}
-    .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideShow 18s infinite;}
-    .slide:nth-child(1){background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b');}
-    .slide:nth-child(2){background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');animation-delay:6s;}
-    .slide:nth-child(3){background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff');animation-delay:12s;}
+    /* HERO */
+    .hero{height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b') center/cover no-repeat;display:flex;align-items:center;}
+    .hero-content{max-width:1200px;margin:auto;padding:0 24px;color:#fff;}
+    .hero h1{font-size:42px;color:var(--gold);max-width:700px;margin-bottom:18px;}
+    .hero p{font-size:15px;max-width:600px;}
+    .hero button{margin-top:30px;padding:16px 40px;border:none;border-radius:40px;background:var(--gold);font-weight:bold;cursor:pointer;}
 
-    @keyframes slideShow{0%{opacity:0;}10%{opacity:1;}30%{opacity:1;}40%{opacity:0;}100%{opacity:0;}}
-
-    .hero-content{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px;}
-    .hero h1{font-size:36px;color:var(--gold);margin-bottom:18px;}
-    .hero p{font-size:15px;max-width:850px;margin:auto;}
-    .hero button{margin-top:28px;padding:16px 36px;border:none;border-radius:40px;background:var(--gold);cursor:pointer;}
-
-    section{max-width:1200px;margin:auto;padding:110px 20px;opacity:0;transform:translateY(40px);transition:all .8s ease;}
-    section.show{opacity:1;transform:none;}
-    h2{font-size:24px;color:var(--blue);margin-bottom:25px;}
+    section{max-width:1200px;margin:auto;padding:120px 24px;}
+    h2{font-size:26px;color:var(--blue);margin-bottom:26px;}
     h3{font-size:16px;color:var(--gold);margin-bottom:10px;}
-    p{font-size:13px;}
 
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-    .split img{width:100%;border-radius:22px;}
+    /* ABOUT */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+    .about img{width:100%;border-radius:24px;}
 
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px;margin-top:40px;}
+    /* EXPERIENCES */
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:90px;align-items:center;}
+    .experience:nth-child(even){direction:rtl;}
+    .experience:nth-child(even) *{direction:ltr;}
+    .experience img{width:100%;border-radius:24px;}
+
+    /* DESTINATIONS GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px;}
     .card{border:1px solid #eee;border-radius:22px;overflow:hidden;}
     .card img{width:100%;height:220px;object-fit:cover;}
     .card div{padding:22px;}
 
-    .payment{background:#fffaf0;border:2px solid var(--gold);border-radius:22px;padding:40px;}
+    /* ITINERARIES */
+    .itinerary{margin-bottom:50px;}
 
-    form{display:grid;gap:14px;max-width:520px;}
+    /* STUDY */
+    .study{background:#f9fafb;border-left:6px solid var(--gold);padding:60px;border-radius:24px;}
+
+    /* CONSULTATION */
+    .consult{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+    form{display:grid;gap:14px;}
     input,textarea,button{padding:14px;border-radius:10px;border:1px solid #ccc;}
     button{background:var(--blue);color:#fff;border:none;cursor:pointer;}
+
+    .payment{border:2px solid var(--gold);border-radius:24px;padding:36px;background:#fffaf0;}
 
     footer{background:#000;color:#fff;text-align:center;padding:60px 20px;}
 
     .whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;padding:16px;border-radius:50%;text-decoration:none;font-size:18px;}
 
-    @media(max-width:768px){.split{grid-template-columns:1fr;} }
+    @media(max-width:768px){.about,.experience,.consult{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#itineraries">Itineraries</a></li>
-    <li><a href="#study">Study Abroad</a></li>
-    <li><a href="#consultation">Consultation</a></li>
-  </ul>
-</nav>
-
-<div class="hero">
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="hero-content">
+<header>
+  <nav>
+    <strong style="color:#fff">Afroluxury Travel</strong>
     <div>
-      <h1>Travel. Culture. Opportunity.</h1>
-      <p>Luxury African journeys, European escapes, resort retreats and study abroad pathways — curated through expert consultation.</p>
-      <button onclick="document.getElementById('consultation').scrollIntoView({behavior:'smooth'})">Begin Your Journey</button>
+      <a href="#about">About</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#study">Study Abroad</a>
+      <a href="#consult">Consultation</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Authentic African Journeys & Global Travel Experiences</h1>
+    <p>We design immersive African tours, luxury resort escapes, global travel, and study abroad pathways through professional consultation.</p>
+    <button onclick="document.getElementById('consult').scrollIntoView({behavior:'smooth'})">Start Your Journey</button>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div>
+      <h2>Who We Are</h2>
+      <p>Afroluxury Travel is a consultation-led travel and lifestyle brand inspired by Africa’s heritage and global luxury standards.</p>
+      <p>Like leading African tour operators, we believe meaningful travel is rooted in culture, storytelling, comfort, and personal connection.</p>
+      <p>We serve individuals, couples, families, groups, and students seeking well-planned experiences with clarity and trust.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+  </div>
+</section>
+
+<section id="experiences">
+  <h2>Our Travel Experiences</h2>
+
+  <div class="experience">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
+    <div>
+      <h3>Beaches & Coastal Escapes</h3>
+      <p>Relax on pristine beaches, island resorts, and private coastal retreats designed for comfort and calm.</p>
     </div>
   </div>
-</div>
+
+  <div class="experience">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" />
+    <div>
+      <h3>Luxury Hotels & Resorts</h3>
+      <p>Handpicked hotels and resorts offering refined service, spa experiences, and premium dining.</p>
+    </div>
+  </div>
+
+  <div class="experience">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
+    <div>
+      <h3>Group & Cultural Tours</h3>
+      <p>Guided group journeys focused on history, heritage sites, hiking, and authentic local engagement.</p>
+    </div>
+  </div>
+</section>
 
 <section id="destinations">
-  <h2>Featured Destinations</h2>
-  <div class="cards">
-    <div class="card"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"><div><h3>Ghana</h3><p>Heritage tours, cultural immersion, beaches and luxury stays.</p></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><div><h3>Europe</h3><p>City escapes, historic landmarks and lifestyle travel.</p></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"><div><h3>Luxury Resorts</h3><p>Island resorts, ocean villas and relaxation retreats.</p></div></div>
+  <h2>Popular Destinations</h2>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"><div><h3>Ghana</h3><p>Heritage, beaches, culture, and modern city life.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><div><h3>Europe</h3><p>Historic cities, lifestyle travel, and iconic landmarks.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"><div><h3>Luxury Resorts</h3><p>Island retreats, spa escapes, and leisure-focused travel.</p></div></div>
   </div>
 </section>
 
 <section id="itineraries">
   <h2>Sample Itineraries</h2>
-  <div class="cards">
-    <div class="card"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"><div><h3>7 Days in Ghana</h3><p>Accra, Cape Coast, heritage sites, beaches and cultural dining.</p></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff"><div><h3>10 Days Europe Highlights</h3><p>Paris, Rome, Amsterdam with guided experiences.</p></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"><div><h3>5-Day Resort Escape</h3><p>Luxury resort stay with spa, dining and leisure.</p></div></div>
-  </div>
+  <div class="itinerary"><h3>7-Day Ghana Experience</h3><p>Accra city tour, Cape Coast heritage sites, beach relaxation, cultural dining.</p></div>
+  <div class="itinerary"><h3>10-Day Europe Highlights</h3><p>Paris, Rome, Amsterdam with guided experiences and leisure days.</p></div>
+  <div class="itinerary"><h3>5-Day Resort Escape</h3><p>Luxury resort stay with spa, fine dining, and relaxation.</p></div>
 </section>
 
 <section id="study">
-  <div class="split">
-    <div>
-      <h2>Study Abroad Services</h2>
-      <p>We support students seeking international education opportunities through consultation, school selection guidance, and application support.</p>
-      <p>Our study abroad service is ideal for students and families looking for clarity, credibility and structured guidance.</p>
-    </div>
-    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1" />
+  <div class="study">
+    <h2>Study Abroad Services</h2>
+    <p>We guide students and families through international education planning, consultations, and application support.</p>
+    <p>Our process ensures clarity, credible options, and structured guidance.</p>
   </div>
 </section>
 
-<section id="consultation">
+<section id="consult">
   <h2>Consultation & Payment</h2>
-  <div class="split">
+  <div class="consult">
     <form>
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <input type="text" placeholder="Phone / WhatsApp" />
-      <textarea placeholder="Tell us about your travel or study plans"></textarea>
-      <button type="submit">Submit Inquiry</button>
+      <input placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Tell us about your plans"></textarea>
+      <button>Submit Inquiry</button>
     </form>
 
     <div class="payment">
       <p><strong>Inquiry Fee: 64 USD</strong></p>
-      <p>MTN Mobile Money<br>Name: <strong>Hamenu Emmanuella</strong><br>Number: <strong>+233 598 695 820</strong></p>
-      <p>Bank transfer details shared securely after inquiry submission.</p>
+      <p>MTN MoMo<br>Name: Hamenu Emmanuella<br>+233 598 695 820</p>
+      <p>Bank transfer details shared after inquiry.</p>
       <ul>
-        <li>Non-refundable inquiry fee</li>
-        <li>Deductible from final service cost</li>
-        <li>Consultation begins after payment confirmation</li>
+        <li>Non-refundable</li>
+        <li>Deductible from final cost</li>
+        <li>Consultation begins after confirmation</li>
       </ul>
     </div>
   </div>
@@ -146,15 +177,10 @@
 
 <footer>
   <p>&copy; 2026 Afroluxury Travel. All Rights Reserved.</p>
+  <p>Privacy Policy | Terms & Conditions</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/233598695820?text=Hello%20I%20want%20to%20start%20my%20journey">💬</a>
-
-<script>
-  const sections=document.querySelectorAll('section');
-  const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');}});},{threshold:0.15});
-  sections.forEach(sec=>observer.observe(sec));
-</script>
+<a class="whatsapp" href="https://wa.me/233598695820">💬</a>
 
 </body>
 </html>
