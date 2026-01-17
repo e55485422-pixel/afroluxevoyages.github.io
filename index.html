@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Afroluxe Voyages | Luxury African & Global Travel Experiences</title>
-  <meta name="description" content="Afroluxe Voyages offers curated Ghana, African and international tours, luxury resorts, and study abroad consultations." />
 
-  <!-- Google Analytics -->
+  <!-- SEO META -->
+  <title>Afroluxe Voyages | Luxury African & Global Travel Experiences</title>
+  <meta name="description" content="Afroluxe Voyages offers curated Ghana, African and international tours, luxury resorts, study abroad consultation, and personalized travel planning." />
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="XXXXXXXXXXXX" />
+
+  <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,71 +20,91 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
+  <!-- STYLES -->
   <style>
-    body { margin:0; font-family: Arial, sans-serif; color:#222; }
-    header { background:#0a3d62; color:white; padding:20px; }
-    nav a { color:white; margin-right:15px; text-decoration:none; font-weight:bold; }
-    .hero { background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover; height:90vh; display:flex; align-items:center; justify-content:center; color:white; text-align:center; }
-    .hero h1 { font-size:48px; background:rgba(0,0,0,0.5); padding:20px; }
-    section { padding:60px 10%; }
-    h2 { color:#0a3d62; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .card { box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:20px; border-radius:10px; }
-    footer { background:#0a3d62; color:white; text-align:center; padding:20px; }
-    .btn { background:#d4af37; padding:12px 20px; color:black; text-decoration:none; border-radius:6px; font-weight:bold; }
+    :root {
+      --blue:#0a3d62;
+      --gold:#d4af37;
+      --white:#ffffff;
+    }
+    body{margin:0;font-family:Arial,sans-serif;font-size:14px;color:#222;}
+    header{position:fixed;top:0;width:100%;background:rgba(10,61,98,0.95);padding:15px;z-index:1000;}
+    nav a{color:white;margin-right:15px;text-decoration:none;font-weight:bold;}
+    section{padding:80px 10%;}
+    h1,h2{color:var(--blue);}
+    .hero{height:100vh;background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:white;}
+    .hero div{background:rgba(0,0,0,0.5);padding:30px;border-radius:10px;}
+    .btn{background:var(--gold);padding:12px 20px;border-radius:6px;color:black;text-decoration:none;font-weight:bold;display:inline-block;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .card{background:white;padding:25px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.1);}
+    footer{background:var(--blue);color:white;text-align:center;padding:30px;}
+    iframe{width:100%;border:0;border-radius:10px;}
+    @media(max-width:768px){section{padding:60px 6%;}}
   </style>
 </head>
 
 <body>
 <header>
   <nav>
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#destinations">Destinations</a>
-    <a href="#booking">Book</a>
+    <a href="#booking">Booking</a>
     <a href="#faq">FAQ</a>
   </nav>
 </header>
 
-<div class="hero">
-  <h1>Luxury African & Global Travel Experiences</h1>
-</div>
+<section id="home" class="hero">
+  <div>
+    <h1>Luxury African & Global Travel Experiences</h1>
+    <p>Curated journeys across Africa and the world</p>
+    <a class="btn" href="#booking">Book a Consultation</a>
+  </div>
+</section>
 
 <section id="about">
-  <h2>About Afroluxe Voyages</h2>
-  <p>Afroluxe Voyages is a premium travel brand connected to Afroluxury Travel & Tour Services. We curate unforgettable journeys across Africa and global destinations, offering luxury, culture, and comfort.</p>
+  <h2>About Us</h2>
+  <p>Afroluxe Voyages is a premium travel brand in connection with Afroluxury Travel & Tour Services. We specialize in curated local and international tours, luxury resort getaways, and study abroad consultation support.</p>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
   <div class="grid">
-    <div class="card">Ghana & African Tours</div>
-    <div class="card">International Tours</div>
-    <div class="card">Luxury Resorts & Honeymoons</div>
-    <div class="card">Study Abroad Consultation</div>
+    <div class="card">Ghana & West Africa Cultural Tours</div>
+    <div class="card">International & Multi‑Destination Tours</div>
+    <div class="card">Luxury Resorts, Honeymoons & Getaways</div>
+    <div class="card">Study Abroad Travel Consultation</div>
   </div>
 </section>
 
 <section id="destinations">
-  <h2>Popular Destinations</h2>
+  <h2>Destinations</h2>
   <div class="grid">
     <div class="card">Ghana & West Africa</div>
     <div class="card">Europe</div>
     <div class="card">Asia</div>
+    <div class="card">Middle East</div>
     <div class="card">Caribbean</div>
   </div>
 </section>
 
 <section id="booking">
-  <h2>Book a Consultation</h2>
-  <p>Consultation fee: <strong>$64 (Non-refundable, deductible)</strong></p>
-  <a class="btn" href="https://wa.me/233598695820">Pay & Book via WhatsApp</a>
+  <h2>Booking & Payment</h2>
+  <p><strong>Consultation Fee:</strong> $64 (Non‑refundable, deductible from final cost)</p>
+  <p><strong>Mobile Money:</strong> MTN MoMo – Hamenu Emmanuella – +233 598 695 820</p>
+  <p>Send proof of payment via WhatsApp or email after payment.</p>
+  <a class="btn" href="https://wa.me/233598695820">WhatsApp Consultation</a>
 </section>
 
 <section id="faq">
   <h2>Frequently Asked Questions</h2>
-  <p>Consultation begins after payment confirmation. Tours are customized. Payments accepted via Mobile Money and Bank Transfer.</p>
+  <p>Consultation begins once payment is confirmed. All trips are customized. Consultation fees are non‑refundable.</p>
+</section>
+
+<section id="contact">
+  <h2>Our Location</h2>
+  <iframe src="https://www.google.com/maps?q=Ghana&output=embed"></iframe>
 </section>
 
 <footer>
